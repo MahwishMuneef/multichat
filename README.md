@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🤖 Multi-Model Chat Assistant
 
 A powerful, extensible chatbot built with **Gemini (Google)**, **OpenAI**, and **DeepSeek** APIs — all inside an interactive **Streamlit** UI. Users can chat with different LLMs, save conversations to Google Docs, and more.
@@ -47,7 +46,4 @@ DEEPSEEK_API_KEY=your_deepseek_key_here
 
 
 ##Run the App
-streamlit run app.py
-=======
-# multichat
->>>>>>> 2df55184d0903eff4a3e8814bd008bc988f681ac
+streamlit run app.pyhttps://github.com/MahwishMuneef/multichat/blob/main/README.md

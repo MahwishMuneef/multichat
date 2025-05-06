@@ -2,7 +2,8 @@ import os
 import streamlit as st
 import google.generativeai as genai
 from dotenv import load_dotenv
-from google_doc_helper import save_chat_to_google_doc
+from google_drive_helper import save_chat_as_txt_to_drive
+
 
 # Load .env variables
 load_dotenv()
@@ -51,15 +52,16 @@ st.markdown("### Actions")
 col1, col2 = st.columns(2)
 
 # Save chat to Google Docs
-if col1.button("💾 Save Chat to Google Doc"):
+if col1.button("💾 Save Chat to Google Drive (.txt)"):
     if st.session_state.messages:
         try:
-            link = save_chat_to_google_doc(st.session_state.messages)
-            st.success(f"Chat saved! [Open Document]({link})")
+            link = save_chat_as_txt_to_drive(st.session_state.messages)
+            st.success(f"Chat saved! [Open in Drive]({link})")
         except Exception as e:
             st.error(f"Failed to save: {e}")
     else:
         st.warning("No messages to save.")
+
 
 # Clear chat
 if col2.button("🧹 Clear Chat"):
